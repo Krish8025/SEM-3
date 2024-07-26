@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="a()">start</button>
+    <button onclick="bc()">stop</button>
+    <script>
+        function changee(){
+        r=Math.random()*255;
+        g=Math.random()*255;
+        b=Math.random()*255;
+        document.body.style.backgroundColor="rgb("+r+","+g+","+b+")";
+        }
+        function a(){
+            c=setInterval(changee,10);
+        }
+        function bc(){
+            clearInterval(c);
+        }
+
+    </script>
+</body>
+</html>

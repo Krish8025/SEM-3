@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var a = Number(prompt("Enter a number"));
+    var rem;
+    var ca = a;
+    var rev = 0; 
+    while (a > 0) {
+    rem = a % 10;
+    rev = (rev * 10) + rem;
+    a = Math.floor(a / 10);
+    }
+    if (ca === rev) 
+    {
+    alert("It's a palindrome");
+    } else 
+    {
+    alert("It's not a palindrome");
+    }
+
+    </script>
+</body>
+</html>

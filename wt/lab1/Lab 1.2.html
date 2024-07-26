@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = Number(prompt("Enter any number"))
+        flag = true;
+        if (a<2)
+            alert(a + " is not prime")
+        else{
+        for (let i = 2; i <= a - 1; i++) {
+            if (a % i == 0) {
+            flag = false;
+            break;
+            }
+        }
+            if (flag == true)
+                alert(a + " is prime")
+            else
+                alert(a + " is not prime")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" type="text">
+    <button onclick="btn1()">Add</button>
+    <button onclick="edit1()">Edit</button>
+     <div id="dis1"></div>
+    <script>
+       const name=document.getElementById("name");
+       const dis=document.getElementById("dis1");
+       var arr=[];
+       var index;
+       function btn1(){
+        arr.push(name.value);
+        display();
+        name.value="";
+       }
+       function display(){
+        dis.innerHTML="";
+        for(i=0;i<arr.length;i++){
+            dis.innerHTML+=arr[i]+"<button onclick='del("+i+")'>Delete</buttone>"+"<button onclick='edit("+i+")'>Edit</buttone>"+"<br>";
+        }
+       }
+       function del(i){
+        arr.splice(i,1);
+        display();
+       }
+       function edit(i){
+        name.value=arr[i];
+        index=i;
+       }
+       function edit1(){
+        arr[index]=name.value;
+        display();
+        name.value="";
+        index=-1;
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+             var num1 =Number(prompt("enter your number 1"));
+             var num2 =Number(prompt("enter your number 2"));
+             
+             console.log(num1);
+            alert("the prime numbers are: ");
+            var count=0;
+            for(let i=num1+1;i<num2;i++){
+                for(let j=2;j<i;j++){
+                    if(i%j==0){
+                        count=count + 1;
+                        console.log(count);
+                        break;
+                    }
+                }
+                if(count==0){
+                    alert(i);
+                }
+                count=0;
+            }
+        </script>
+</body>
+</html>

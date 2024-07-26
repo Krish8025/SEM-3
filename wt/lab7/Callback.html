@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(x,y){
+            let z=x+y;
+            display(z);
+        }
+        function sub(x,y){
+            let z=x-y;
+            display(z);
+        }
+        function display(a){
+            document.write("the value is :"+a);
+        }
+        function operate(xyz){
+            let n1=parseInt(prompt("enter your no.:"));
+            let n2=parseInt(prompt("enter your no.:"));
+            xyz(n1,n2);
+        }
+        operate(add);
+    </script>
+</body>
+</html>
